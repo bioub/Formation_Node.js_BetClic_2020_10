@@ -35,7 +35,7 @@ function jouer() {
   rl.question('Quel est le nombre entier ? ', (answer) => {
     const entierSaisi = Number.parseInt(answer, 10);
 
-    if (Number.isNaN(entierAlea)) {
+    if (Number.isNaN(entierSaisi)) {
       console.log('Il faut saisir un nombre entier');
       return jouer();
     }
