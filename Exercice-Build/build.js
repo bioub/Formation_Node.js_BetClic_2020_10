@@ -12,3 +12,9 @@ const indexHtmlPath = path.resolve(srcPath, 'index.html');
 const indexHtmlDistPath = path.resolve(distPath, 'index.html');
 const appJsDistPath = path.resolve(distPath, 'app.js');
 
+async function build() {
+  // ATTENTION avec fs-extra pas de fs.promises.
+  await fs.remove(distPath);
+}
+
+build();
