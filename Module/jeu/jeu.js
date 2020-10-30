@@ -1,4 +1,6 @@
-const readline = require('readline');
+const readline = require('readline'); // fichier binaire de Node.js
+const chalk = require('chalk'); // node_modules
+const Random = require('./random'); // fichier local au projet
 
 class Jeu {
   // proche d'être normé (ES.Next)
@@ -23,7 +25,7 @@ class Jeu {
       console.log(`Vous avez déjà joué ${this.essais.join(' - ')}`);
     }
 
-    this._rl.question('Quel est le nombre entier ? ', (answer) => {
+    this._rl.question(chalk.blue('Quel est le nombre entier ? '), (answer) => {
       const entierSaisi = Number.parseInt(answer, 10);
 
       if (Number.isNaN(entierSaisi)) {
@@ -34,10 +36,10 @@ class Jeu {
       this.essais.push(entierSaisi);
 
       if (entierSaisi < this.entierAlea) {
-        console.log('Trop petit');
+        console.log(chalk.bgYellow('Trop petit'));
         this.jouer();
       } else if (entierSaisi > this.entierAlea) {
-        console.log('Trop grand');
+        console.log(chalk.bgYellow('Trop grand'));
         this.jouer();
       } else {
         console.log('Gagné');
@@ -46,3 +48,5 @@ class Jeu {
     });
   }
 }
+
+module.exports = Jeu;
