@@ -1,3 +1,5 @@
+'use strict';
+
 const prenoms = ['Romain', 'Eric', 'Jean'];
 
 /**
@@ -10,7 +12,7 @@ function hello(name = '') {
 
 // ES6
 for (const p of prenoms) {
-  console.log(hello());
+  console.log(hello(p));
 }
 
 // ES5

@@ -12,10 +12,11 @@ function hello(name = '') {
 // prenoms.forEach(cb);
 
 
-// ES5
-prenoms.forEach((p) => {
-  console.log(hello(p));
-});
+// ES5 (forEach, map, filter, reduce)
+prenoms
+  .filter((p) => p.length === 4)
+  .map((p) => p.toUpperCase())
+  .forEach((p) => console.log(hello(p)));
 
 console.log('END');
 

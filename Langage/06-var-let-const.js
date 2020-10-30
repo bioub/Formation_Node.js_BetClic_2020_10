@@ -1,5 +1,5 @@
 function hello() {
-  if (true) {
+  {
     const constVar = 'constVar'; // portée de bloc (if)
     let letVar = 'letVar'; // portée de bloc (if)
     var varVar = 'varVar'; // portée de fonction (hello)

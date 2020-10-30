@@ -1,3 +1,4 @@
+// function() {
 globalThis.globalVar = 'globalVar'; // ES2019
 const moduleVar = 'moduleVar'; // module => fichier
 
@@ -14,7 +15,8 @@ function externe() {
 }
 
 externe();
-
+// interne, closureVar, localVar
+//}
 // pile d'appels
 // ^
 // |lg - lg - lg - lg

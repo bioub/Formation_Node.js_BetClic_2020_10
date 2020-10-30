@@ -19,7 +19,7 @@ console.log(Math.sum(1, 2)); // 3
 // MAUVAISE PRATIQUE d'étendre des objets
 // qu'on a pas créé
 
-delete Math.sum;
+delete Math.sum; // undefined
 
 
 // object literal

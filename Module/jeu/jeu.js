@@ -1,22 +1,3 @@
-const Random = {
-  get() {
-    return Math.random();
-  },
-  getArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
-  },
-  getInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-  },
-  getIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
-  },
-};
-
 const readline = require('readline');
 
 class Jeu {
@@ -65,16 +46,3 @@ class Jeu {
     });
   }
 }
-
-const game = new Jeu({
-  min: 50,
-});
-game.jouer();
-
-// pile d'appels
-// ^
-// |                          question       question
-// |question                  jouer          jouer
-// |joueur   ....             =>        .... =>
-// +-----0------------------------12---------------------------------> temps
-//                      END       B           A     D          C
